@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaushik Ray - Electrical Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+        <p class="loading-text">Creating Magic...</p>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles-container"></div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower"></div>
+
+    <header id="hero">
+        <canvas id="granim-canvas"></canvas>
+        <div class="hero-content">
+            <p class="greeting animate-fade-in">Hi</p>
+            <p class="intro animate-fade-in">My name is</p>
+            <h1 class="name animate-pop-in">
+                <span class="name-highlight">Kaushik Ray</span>
+                <div class="name-underline"></div>
+            </h1>
+            <div class="title-container animate-fade-in">
+                <span class="title-prefix">I am an </span>
+                <span class="typewriter" data-words="Electrical Engineer,Renewable Energy Specialist,Smart Grid Expert,Electronics Engineer"></span>
+                <span class="laptop-emoji"> | ⚡</span>
+            </div>
+        </div>
+        <a href="#navbar" class="scroll-down-arrow">
+            <div class="scroll-indicator">
+                <div class="scroll-text">Scroll Down</div>
+                <div class="scroll-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main>
+    <nav id="navbar">
+        <div class="nav-container">
+                                <a href="#hero" class="nav-logo">
+                    <span class="logo-name">Kaushik Ray</span>
+                </a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <div class="switch-toggle">
+                        <div class="switch-handle">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+        </div>
+    </nav>
+        <section id="about" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+            <h2 class="section-title">About me</h2>
+                <div class="section-line"></div>
+            </div>
+                        <div class="about-container">
+            <div class="about-content">
+                    <p class="about-intro"><span class="drop-cap">H</span>ello! I'm Kaushik Ray, a passionate Electrical and Electronic Engineering graduate with a strong foundation in both academic theory and practical experience.</p>
+                    <p>My passion lies in <span class="tech-highlight">renewable energy</span>, <span class="tech-highlight">smart grids</span>, and <span class="tech-highlight">electronic systems</span>, areas where I am eager to drive innovation and contribute to sustainable solutions.</p>
+                    <p>Throughout my education, I have developed robust problem-solving skills, gaining proficiency in essential tools and methodologies that are crucial in today's technological landscape. I'm constantly learning and evolving, working towards becoming a <span class="gradient-text">Renewable Energy Specialist</span>.</p>
+                    <p>My collaborative nature and team-oriented mindset have allowed me to contribute to complex projects, ensuring that our solutions are both efficient and impactful. I am excited to apply my technical expertise and creative thinking to real-world challenges.</p>
+                    <div class="about-cta">
+                        <a href="assets/Kaushik CV.pdf" download="Kaushik_Ray_CV.pdf" class="download-cv-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="assets/Kaushik Photo.jpg" alt="Kaushik Ray" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">Educational Background</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-content">
+                        <h3 class="education-degree">B.Sc. Engineering (2022-2025)</h3>
+                        <h4 class="education-institution">American International University - Bangladesh</h4>
+                        <p class="education-department">Department of Electrical and Electronic Engineering</p>
+                        <div class="education-achievements">
+                            <span class="achievement-badge">Dean's Award Winner (2x)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">🏫</div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Higher Secondary Certificate</h3>
+                        <h4 class="education-institution">Cantonment Public School and College</h4>
+                        <p class="education-department">Saidpur, Nilphamari - Science Department</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">📚</div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Secondary School Certificate</h3>
+                        <h4 class="education-institution">Lions School and College</h4>
+                        <p class="education-department">Saidpur, Nilphamari</p>
+                    </div>
+                </div>
+            </div>
+            <div class="elective-courses">
+                <h3 class="courses-title">Specialized Courses</h3>
+                <div class="courses-grid">
+                    <div class="course-item">
+                        <div class="course-icon">🌱</div>
+                        <h4>Renewable Energy Technology</h4>
+                        <p>Harness energy from renewable sources like solar, wind, and hydro power. Covers design, operation, and environmental impact.</p>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-icon">💻</div>
+                        <h4>Digital Design with System [VERILOG, VHDL]</h4>
+                        <p>Design and simulate digital circuits using Verilog and VHDL with focus on FPGA programming.</p>
+                    </div>
+                    <div class="course-item">
+                        <div class="course-icon">⚡</div>
+                        <h4>Power System Protection</h4>
+                        <p>Protecting electrical power systems from faults using protective relays and circuit breakers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section id="skills" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="category-title">Engineering Software</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-icon">📐</div>
+                            <span class="skill-name">AutoCAD</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-icon">📊</div>
+                            <span class="skill-name">MATLAB</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-icon">🔌</div>
+                            <span class="skill-name">Multisim</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-icon">⚡</div>
+                            <span class="skill-name">Proteus</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-icon">💻</div>
+                            <span class="skill-name">VERILOG</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-icon">🔧</div>
+                            <span class="skill-name">VHDL</span>
+                            <div class="skill-level"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Programming & Office</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-icon">💻</div>
+                            <span class="skill-name">C++</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-icon">📄</div>
+                            <span class="skill-name">MS Word</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-icon">📊</div>
+                            <span class="skill-name">MS Excel</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-icon">📈</div>
+                            <span class="skill-name">PowerPoint</span>
+                            <div class="skill-level"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">Technical Abilities</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-level="95">
+                            <div class="skill-icon">🔍</div>
+                            <span class="skill-name">Problem Solving</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-icon">🔥</div>
+                            <span class="skill-name">Soldering</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-icon">🛡️</div>
+                            <span class="skill-name">Safety Standards</span>
+                            <div class="skill-level"></div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-icon">👥</div>
+                            <span class="skill-name">Team Collaboration</span>
+                            <div class="skill-level"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section id="projects" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Engineering Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-container">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="assets/Projects/1. Obstacle Detector by IR sensor- Group Project.jpg" alt="Obstacle Detector Project" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="assets/Projects/1. Obstacle Detector by IR sensor- Group Project.jpg" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Group Project</div>
+                        <h3 class="project-title">Obstacle Detector by IR Sensor</h3>
+                        <div class="project-description">
+                            An obstacle detector using IR sensor designed to detect objects in the path of a moving entity. The IR sensor emits infrared light and measures reflection off nearby objects, triggering appropriate responses like stopping movement or changing direction.
+                        </div>
+                        <div class="project-tech">
+                            <span>IR Sensor</span>
+                            <span>Microcontroller</span>
+                            <span>Robotics</span>
+                            <span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/Projects/2. Arduino NANO, HC-SR04 Ultrasonic Sensor-Group Project.jpg" alt="Arduino Ultrasonic Project" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="assets/Projects/2. Arduino NANO, HC-SR04 Ultrasonic Sensor-Group Project.jpg" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Group Project</div>
+                        <h3 class="project-title">Arduino NANO Ultrasonic Robot</h3>
+                        <div class="project-description">
+                            Obstacle-avoiding robot using Arduino Nano and HC-SR04 Ultrasonic Sensor. Features L298N Motor Driver Module for 5V DC motors, battery power system, and intelligent navigation that processes sensor data to avoid obstacles effectively.
+                        </div>
+                        <div class="project-tech">
+                            <span>Arduino Nano</span>
+                            <span>HC-SR04</span>
+                            <span>L298N Driver</span>
+                            <span>Robotics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-container">
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/1. Deans Award Fall 22-23 semester gpa 3.88.jpg" alt="Dean's Award Fall 22-23" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dean's Award Fall 22-23</h3>
+                        <p class="achievement-description">Achieved Dean's List Honors for Fall 22-23 semester with GPA 3.88 at American International University Bangladesh.</p>
+                        <div class="achievement-badge">Academic Excellence</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/2. Deans award fall 23-24 spring 22-23 .jpg" alt="Dean's Award Spring 22-23 & Fall 23-24" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dean's Award Spring 22-23 & Fall 23-24</h3>
+                        <p class="achievement-description">Achieved Dean's List Honors for Spring 22-23 and Fall 23-24 semesters with GPA ### at American International University Bangladesh.</p>
+                        <div class="achievement-badge">Academic Excellence</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/3. Deans award Fall 24-25 spring 23-24.jpg" alt="Dean's Award Spring 23-24 & Fall 24-25" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Dean's Award Spring 23-24 & Fall 24-25</h3>
+                        <p class="achievement-description">Achieved Dean's List Honors for Spring 23-24 and Fall 24-25 semesters with GPA ### at American International University Bangladesh.</p>
+                        <div class="achievement-badge">Academic Excellence</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/Certificate- offshore wind energy from wind turbines to wind farms.jpg" alt="Offshore Wind Energy Certificate" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Offshore Wind Energy Certification</h3>
+                        <p class="achievement-description">Completed "Offshore Wind Energy: From Wind Turbines to Wind Farms" certification, gaining in-depth understanding of renewable energy project design and management.</p>
+                        <div class="achievement-badge">Professional Development</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/Certificate- fundamental of Robotics Loclization and Manipulation.jpg" alt="Robotics Certificate" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Robotics Fundamentals Workshop</h3>
+                        <p class="achievement-description">Completed workshop on 'Fundamentals of Robotics Localization and Manipulation,' gaining hands-on experience in robotic systems and their applications.</p>
+                        <div class="achievement-badge">Technical Training</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-image clickable-image">
+                        <img src="assets/certificates/Certificate- 27th ICCIT Conference PID 863 Remaining Useful life Prediction for Turbojet Engines Using Deep CNN o Raw Sensor Data.jpg" alt="ICCIT Conference Certificate" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">ICCIT Conference Participation</h3>
+                        <p class="achievement-description">Participated in the 27th ICCIT Conference with research on "Remaining Useful Life Prediction for Turbojet Engines Using Deep CNN on Raw Sensor Data".</p>
+                        <div class="achievement-badge">Research</div>
+                    </div>
+                </div>
+
+                <div class="highlights-section">
+                    <h3 class="highlights-title">Competition Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🏆</div>
+                            <h4>9th Place - Math & Physics Olympiad</h4>
+                            <p>Hajee Mohammad Danesh Science and Technology University (2015)</p>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌟</div>
+                            <h4>Best Meritorious Student</h4>
+                            <p>Rangpur Divisional Level - Creative Talent Hunt 2015</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-reveal">
+            <div class="section-header">
+                <span class="section-number">06.</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <h3 class="contact-title">Ready to collaborate on innovative projects?</h3>
+                    <p class="contact-description">
+                        I'm always interested in new opportunities in renewable energy, smart grids, and electronic systems. 
+                        Whether you have a project in mind or just want to discuss engineering solutions, I'd love to hear from you!
+                    </p>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kantyroy2010@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+8801785355281</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Taraganj, Rangpur, Bangladesh (5420)</span>
+                        </div>
+                    </div>
+
+                </div>
+            <div class="social-links">
+                    <a href="#" class="social-link" data-platform="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:kantyroy2010@gmail.com" class="social-link" data-platform="email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 All Rights Reserved</p>
+            <div class="footer-social-links">
+                <a href="#" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:kantyroy2010@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#hero" class="scroll-to-top-btn">
+        <i class="fas fa-rocket"></i>
+    </a>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html> 
