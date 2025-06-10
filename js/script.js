@@ -154,8 +154,19 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    // Simplified Navigation
+    // Enhanced Navigation with Mobile Fixes
     function initNavigation() {
+        // Reset mobile menu state on initialization
+        const navMenuElement = document.querySelector('.nav-menu');
+        const mobileToggleElement = document.querySelector('.mobile-menu-toggle');
+        
+        if (navMenuElement) {
+            navMenuElement.classList.remove('active');
+        }
+        if (mobileToggleElement) {
+            mobileToggleElement.classList.remove('active');
+        }
+        
         // Smooth scrolling for navigation links
         const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
         navLinks.forEach(link => {
@@ -173,31 +184,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 // Close mobile menu if open
-                const navMenu = document.querySelector('.nav-menu');
-                navMenu.classList.remove('active');
+                if (navMenuElement) {
+                    navMenuElement.classList.remove('active');
+                }
+                if (mobileToggleElement) {
+                    mobileToggleElement.classList.remove('active');
+                }
+                document.body.style.overflow = 'auto';
             });
         });
 
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (mobileToggle && navMenu) {
-            mobileToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-                mobileToggle.classList.toggle('active');
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-                    navMenu.classList.remove('active');
-                    mobileToggle.classList.remove('active');
-                }
-            });
-        }
+        // Mobile menu toggle functionality removed - using always visible horizontal menu instead
+        console.log('Mobile hamburger menu disabled - using horizontal navigation');
     }
 
     // Image Modal Functionality
@@ -251,9 +249,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Enhanced Theme Switcher with Hero Background Fix
+    // Enhanced Theme Switcher with Mobile Fix
     function initThemeSwitcher() {
     const themeSwitcher = document.querySelector('.theme-switcher');
+        const switchToggle = document.querySelector('.switch-toggle');
     const body = document.body;
         const hero = document.getElementById('hero');
 
@@ -266,27 +265,41 @@ document.addEventListener('DOMContentLoaded', () => {
             updateHeroBackground(false);
         }
 
-        if (themeSwitcher) {
-    themeSwitcher.addEventListener('click', () => {
+        // Add click handlers to both elements for better mobile support
+        const clickHandler = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Theme switcher clicked');
+            
         body.classList.toggle('dark-mode');
-                const isDark = body.classList.contains('dark-mode');
-                
-                // Update hero background immediately
-                updateHeroBackground(isDark);
-                
-                // Add visual feedback
-                themeSwitcher.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    themeSwitcher.style.transform = 'scale(1)';
-                }, 150);
-                
-                // Save preference
-                if (isDark) {
+            const isDark = body.classList.contains('dark-mode');
+            
+            // Update hero background immediately
+            updateHeroBackground(isDark);
+            
+            // Add visual feedback
+            const targetElement = e.currentTarget;
+            targetElement.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                targetElement.style.transform = 'scale(1)';
+            }, 150);
+            
+            // Save preference
+            if (isDark) {
             localStorage.setItem('theme', 'dark-mode');
         } else {
             localStorage.removeItem('theme');
         }
-    });
+        };
+
+        if (themeSwitcher) {
+            themeSwitcher.addEventListener('click', clickHandler);
+            themeSwitcher.addEventListener('touchstart', clickHandler);
+        }
+        
+        if (switchToggle) {
+            switchToggle.addEventListener('click', clickHandler);
+            switchToggle.addEventListener('touchstart', clickHandler);
         }
 
         function updateHeroBackground(isDark) {
@@ -504,20 +517,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Main initialization function
+    // Main initialization function with Mobile Optimizations
     function startMainAnimations() {
-        createFloatingParticles();
-        initCursorFollower();
+        // Check if mobile device
+        const isMobile = window.innerWidth <= 768;
+        
+        // Initialize components with mobile optimizations
+        if (!isMobile) {
+            createFloatingParticles();
+            initCursorFollower();
+        } else {
+            // Reduced particles for mobile
+            createFloatingParticles();
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach((particle, index) => {
+                if (index > 10) { // Keep only 10 particles on mobile
+                    particle.remove();
+                }
+            });
+        }
+        
         initTypewriter();
         initRevealAnimations();
         initNavigation();
         initThemeSwitcher();
         initScrollToTop();
         initProjectCards();
-        initGranim();
+        
+        if (!isMobile) {
+            initGranim();
+        }
+        
         initSocialLinks();
         addRippleAnimation();
         initImageModal();
+        
+        // Mobile performance optimizations
+        if (isMobile) {
+            // Disable heavy animations on mobile
+            document.documentElement.style.setProperty('--transition-smooth', 'all 0.2s ease');
+            
+            // Reduce animation duration
+            const animatedElements = document.querySelectorAll('[class*="animate"]');
+            animatedElements.forEach(el => {
+                el.style.animationDuration = '0.5s';
+            });
+        }
         
         // Confetti easter egg
         let clickCount = 0;
@@ -529,27 +574,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Request animation frame for smooth animations
-        function requestTick() {
-            requestAnimationFrame(updateAnimations);
-        }
-        
-        function updateAnimations() {
-            // Smooth scrolling indicator
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                const scrollY = window.scrollY;
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight;
-                const scrollPercentage = scrollY / (documentHeight - windowHeight);
+        // Request animation frame for smooth animations (reduced on mobile)
+        if (!isMobile) {
+            function requestTick() {
+                requestAnimationFrame(updateAnimations);
+            }
+            
+            function updateAnimations() {
+                // Smooth scrolling indicator
+                const scrollIndicator = document.querySelector('.scroll-indicator');
+                if (scrollIndicator) {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight;
+                    const scrollPercentage = scrollY / (documentHeight - windowHeight);
+                    
+                    scrollIndicator.style.transform = `translateX(-50%) translateY(${scrollPercentage * 20}px)`;
+                }
                 
-                scrollIndicator.style.transform = `translateX(-50%) translateY(${scrollPercentage * 20}px)`;
+                requestTick();
             }
             
             requestTick();
         }
-        
-        requestTick();
     }
 
     // Scroll-down arrow enhancement
